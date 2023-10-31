@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  frontend_prod:
+    container_name: dribble_c_prod
+    build: 
+      context: .
+      dockerfile: prod.Dockerfile
+    restart : always
+    environment:
+      - NODE_ENV=production
+    ports:
+      - 3001:3000
